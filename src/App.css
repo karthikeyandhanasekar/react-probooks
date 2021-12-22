@@ -4,3 +4,39 @@
   padding:0;
   box-sizing: border-box;
 }
+header,.floatingbutton
+{
+  background-color: green;
+  color: white;
+}
+header
+{
+
+  text-align: center;
+  padding:1%;
+
+}
+.floatingbutton
+{
+  position: fixed;
+  font-size: 2vw;
+  padding: 1%;
+  border-radius: 50%;
+  right: 5%;
+  top: 80%;
+  cursor: pointer;
+}
+input
+{
+  width: 100%;
+  font-size: 1vw;
+  padding: 1%;
+}
+.input
+{
+  display: none;
+}
+.show
+{
+  display: block;
+}
