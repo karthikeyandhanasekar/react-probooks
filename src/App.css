@@ -34,6 +34,12 @@ input
 }
 .input
 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: .8;
+  z-index: 1;
+  border: solid;
   display: none;
 }
 .show

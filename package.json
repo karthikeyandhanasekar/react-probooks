@@ -4,10 +4,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@okta/okta-signin-widget": "4.2",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.24.0",
+    "netlify-lambda": "1.6",
+    "parcel": "1.12",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
@@ -17,7 +20,8 @@
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "react-scripts build",
+    "dev": "rimraf dist && parcel client/index.html",
+    "build": "rimraf dist && netlify-lambda install && parcel build client/index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -40,6 +44,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "rimraf": "3.0"
   }
 }
